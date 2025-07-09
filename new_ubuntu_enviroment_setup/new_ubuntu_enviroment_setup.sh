@@ -28,11 +28,6 @@ install_all() {
   install_vscode
   install_sublime
   install_chrome
-  install_meld
-  install_kazam
-  install_clion
-  install_systemback
-  install_stickynotes
   echo -e "\033[46;37mAll installations 安装完成。\033[0m"
 }
 
@@ -723,12 +718,10 @@ echo  -e "\033[34m 这里是主程序，具体是----------
 12：  安装Clash(Clash代理工具)
 13：  安装CLion(C/C++编辑器
 14：  安装Miniconda(Anaconda的轻量级版本)
-15：  安装Termius(SSH客户端)
-16：  安装systemback(系统备份和恢复工具，默认安装)
-17：  安装 Cursor可视化图标(!!!VsCode进阶版，无法通过直接安装，需要手动下载，然后运行该脚本，默认不安装)
-18：  安装 ROS (!!!机器人操作系统，也默认手动安装)
-19：  安装 CUDA 11.8 (可选，支持TensorRT8.7和cudnn 8.7)
-20：  安装 CUDA 12.2 (可选)\033[0m"
+15：  安装systemback(系统备份和恢复工具，默认安装)
+16：  安装 ROS (!!!机器人操作系统，也默认手动安装)
+17：  安装 CUDA 11.8 (可选，支持TensorRT8.7和cudnn 8.7)
+18：  安装 CUDA 12.2 (可选)\033[0m"
 echo  -e "\033[34m 请根据需要输入对应的数字，多个数字之间用空格隔开，回车默认安装所有工具\033[0m"
 # Prompt user for input
 read -p "请输入数字: " input
@@ -800,19 +793,12 @@ else
         ;;
       16)
         update_system
-        install_compizconfig
-        ;;
-      17)
-        install_cursor
-        ;;
-      18)
-        update_system
         install_ros
         ;;
-      19)
+      17)
         install_cuda118
         ;;
-      20)
+      18)
         install_cuda122
         ;;
       *)
